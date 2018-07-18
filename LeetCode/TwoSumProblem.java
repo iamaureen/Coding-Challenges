@@ -16,7 +16,21 @@ import java.util.Map;
 public class TwoSumProblem {
 	
 	public static int[] TwoSumProblem(int[] nums, int target) {
-        
+
+		/* brute force technique - o(n^2) solution
+		int i,j;
+		
+		for (i=0;i<nums.length;i++) {
+			for(j=i+1;j<nums.length;j++) {
+				if(nums[i]+nums[j]==target) {
+					return new int[] {i,j};
+				}
+			}
+		}
+		return new int[] {}; */
+		
+		
+        //o(n) solution
 		Map <Integer, Integer> map = new HashMap< >();
         int i;
         for(i = 0; i < nums.length; i++){
@@ -38,9 +52,15 @@ public class TwoSumProblem {
 		
 		int[] nums = {2,7,11,15};
 		int target = 9;
+		int[] nums1 = {2,7,2,15};
+		int target1 = 4;
+		
 		int[] index = TwoSumProblem(nums, target);
+		int[] index1 = TwoSumProblem(nums1, target1);
+
 		
 		System.out.println(Arrays.toString(index));
+		System.out.println(Arrays.toString(index1));
 		
 	}
 	
