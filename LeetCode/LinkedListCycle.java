@@ -27,6 +27,28 @@ public class LinkedListCycle {
 	
 	static boolean hasCycle(Node head) {
 		
+		//solution: brute force technique
+		/* if(head == null) return false;
+		Node iterator1 = head;
+		int traverseNumber = 0;
+		while(iterator1!=null && iterator1.next!=null) { 
+			iterator1 = iterator1.next;
+			traverseNumber++;
+			Node iterator2 = head;
+			int x = traverseNumber;
+			int count = 0;
+			while(x > 0) {
+				iterator2 = iterator2.next;
+				if(iterator1 == iterator2) count++;
+				if(count == 2) return true;
+				x--;
+			}
+		}
+		System.out.println("hello");
+		return false; */
+		
+		
+		//solution: tortoise-hare technique
 		if (head == null) return false;
 		Node fast = head; 
 		Node slow = head; 
@@ -36,7 +58,6 @@ public class LinkedListCycle {
 			System.out.println(slow.x +"  "+ fast.x ); //debug purpose
 			if(fast == slow) return true;
 		}
-		
 		return false;
 				
 	}
