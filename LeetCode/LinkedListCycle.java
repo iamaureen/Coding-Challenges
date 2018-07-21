@@ -27,7 +27,9 @@ public class LinkedListCycle {
 	
 	static boolean hasCycle(Node head) {
 		
-		//solution: brute force technique
+		//solution: brute force technique: For each Node, traverse the entire list from 
+		//the start till the previous Node and see if there is a Node which is equal to the 
+		//current Node. If yes then we have detected a loop, else continue.
 		/* if(head == null) return false;
 		Node iterator1 = head;
 		int traverseNumber = 0;
