@@ -2,7 +2,7 @@ package LeetCode;
 
 //https://leetcode.com/problems/reverse-linked-list/description/
 
-public class reverseLinkedList {
+public class reverseLinkedList206 {
 	
 	//linked list node
 		static class ListNode{

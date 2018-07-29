@@ -2,7 +2,7 @@ package LeetCode;
 
 //https://leetcode.com/problems/to-lower-case/description/
 
-public class toLowerCase {
+public class toLowerCase709 {
 	
 	public static String toLowerCase(String str) {
         

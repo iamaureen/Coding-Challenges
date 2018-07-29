@@ -1,11 +1,13 @@
 package LeetCode;
 
+//https://leetcode.com/problems/jewels-and-stones/description/
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class numJewelsInStones {
+public class numJewelsInStones771 {
 	
 	public static int numJewelsInStones(String J, String S) {
 		

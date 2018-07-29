@@ -5,7 +5,7 @@ package LeetCode;
 //https://martinm2w.wordpress.com/2012/05/28/2-5-linkedlist-find-the-beginning-of-loop-in-a-circular-linkedlist/
 //https://www.youtube.com/watch?v=-YiQZi3mLq0
 
-public class LinkedListCycleBeginning {
+public class LinkedListCycleBeginning142 {
 
 	
 	//linked list node

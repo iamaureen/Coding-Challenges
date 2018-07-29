@@ -1,6 +1,6 @@
 package LeetCode;
 
-public class reverseString {
+public class reverseString344 {
 	
 	public String reverseString(String s) {
         

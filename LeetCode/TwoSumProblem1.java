@@ -13,7 +13,7 @@ import java.util.Map;
 //the hash table, which stores exactly n elements. 
 
 
-public class TwoSumProblem {
+public class TwoSumProblem1 {
 	
 	public static int[] TwoSumProblem(int[] nums, int target) {
 

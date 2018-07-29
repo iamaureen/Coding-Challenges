@@ -2,7 +2,7 @@ package LeetCode;
 
 //https://leetcode.com/problems/length-of-last-word/description/
 
-public class lengthOfLastWord {
+public class lengthOfLastWord58 {
 	
 	 public static int lengthOfLastWord(String s) {
 		

@@ -2,7 +2,7 @@ package LeetCode;
 
 //https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
-public class RemoveDuplicates {
+public class RemoveDuplicates26 {
 	
 	public static int removeDuplicates(int[] nums) {
         int length = 0;

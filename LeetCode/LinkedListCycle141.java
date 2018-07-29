@@ -3,7 +3,7 @@ package LeetCode;
 //https://leetcode.com/problems/linked-list-cycle/description/
 //more details (3 solutions): http://www.baeldung.com/java-linked-list-cyclicity
 
-public class LinkedListCycle {
+public class LinkedListCycle141 {
 
 	
 	//linked list node
