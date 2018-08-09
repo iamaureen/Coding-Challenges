@@ -12,7 +12,12 @@ public class HammingDistance461 {
 		while(xorValue != 0 ) {
 			
 			xorValue = xorValue & (xorValue - 1); //this helps to count number of set bits in a number
-												 //how does it work? write an explanation
+												 //how?
+												 //initial if n=odd hole we get n-1 which is even. it will reduce 1 set bit.
+												 //once even, it will always be even. and with each '&(n-1)'
+												 //set bit will reduce until 0.
+												//n=odd example: n=111, n-1=110 so n&(n-1)=110(n-1 and even); n=011, n-1=010 so n&(n-1)=010 (n-1 and even); final result will always be even
+												//n=even example: n=110, n-1=101 so n&(n-1)=100(even), n=1000, n-1=0111 so n&(n-1)=0000(even); always even and set bit reduces each time
 			count++;
 			
 		}
