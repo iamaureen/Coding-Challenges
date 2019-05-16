@@ -1,5 +1,8 @@
 package LeetCode;
 
+//problem statement: https://leetcode.com/problems/roman-to-integer
+//solution hint/explanation: https://www.youtube.com/watch?v=Xy1dfcg7P-Y
+//
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,11 +25,12 @@ public class RomanToInteger13 {
 		romanValues.put('M', 1000);
 		
 		//technique: traverse from last. 
-		//if the current digit is greater than previous digit, subtract else add
+		//
 		int length = s.length();
 		int result = romanValues.get(s.charAt(length-1));
 		
-		//loop through the entire digit string
+		//loop through the entire digit string from the second last digit. 
+		//if the current digit is greater than later digit, add (VI) else add
 		for(int i=length-2; i >=0; i--) {
 			
 			if(romanValues.get(s.charAt(i)) >= romanValues.get(s.charAt(i+1))) {
