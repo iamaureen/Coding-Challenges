@@ -2,6 +2,8 @@ package LeetCode;
 
 import java.util.Arrays;
 
+//problem: https://leetcode.com/problems/rotate-array
+//time: 16 minutes
 public class rotateArray189 {
 	
 	public static void rotate(int[] nums, int k) {
