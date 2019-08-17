@@ -39,7 +39,7 @@ public class TwoSumProblem1 {
         
         for(i = 0; i < nums.length; i++){
             int keyToFind = target - nums[i];
-            if(map.containsKey(keyToFind) && map.get(keyToFind) != i){
+            if(map.containsKey(keyToFind) && map.get(keyToFind) != i){ //why "&& map.get(keyToFind) != i" condition?**
                 return new int[] {i, map.get(keyToFind)};
             }
         }
@@ -65,5 +65,15 @@ public class TwoSumProblem1 {
 	}
 	
 }
+
+//** input array = [3,2,4]; target = 6
+//i = 0; keyToFind = 6 - array[0] = 6 - 3 = 3 -- this 3 is used as key to get the index. 
+//for the correct result, we need two 3s in the array, but we have one.
+//w/o the && condition, map.get(keyToFind) = map.get(3) returns index 0. 
+//however, index 0 is the first 3 (for the sum 6), but the algo thinks it found the second 3(for the sum 6)
+//and returns [0,0] -- which is wrong because it is only one 3 
+//when the && condition is added, it checks that the value in the same index is not considered for the sum
+
+
 
 
