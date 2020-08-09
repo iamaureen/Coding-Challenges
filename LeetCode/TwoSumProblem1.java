@@ -17,6 +17,7 @@ public class TwoSumProblem1 {
 	
 	public static int[] TwoSumProblem(int[] nums, int target) {
 
+		//solution 1
 		/* brute force technique - o(n^2) solution
 		int i,j;
 		
@@ -29,22 +30,41 @@ public class TwoSumProblem1 {
 		}
 		return new int[] {}; */
 		
-		
+		//solution 2
         //o(n) solution
-		Map <Integer, Integer> map = new HashMap< >();
-        int i;
-        for(i = 0; i < nums.length; i++){
+//		Map <Integer, Integer> map = new HashMap< >();
+//        int i;
+//        for(i = 0; i < nums.length; i++){
+//            map.put(nums[i], i);
+//        }
+//        
+//        for(i = 0; i < nums.length; i++){
+//            int keyToFind = target - nums[i];
+//            if(map.containsKey(keyToFind) && map.get(keyToFind) != i){ //why "&& map.get(keyToFind) != i" condition?**
+//                return new int[] {i, map.get(keyToFind)};
+//            }
+//        }
+//        
+//        return new int[] {};
+		
+		//solution 3
+		//since exactly one solution, so two indices 
+        int[] result = new int[2];
+        
+        //Hashmap to store the array values and their indices
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        
+        //loop through the array and see if the difference(target-nums[i])is in the hashmap or not; if yes return the indices
+        for(int i=0;i<nums.length;i++){
+            int difference = target - nums[i];
+            if(map.containsKey(difference)){
+                result[0] = i; //current number index
+                result[1] = map.get(difference); //get the index for the paired number
+            }
             map.put(nums[i], i);
         }
         
-        for(i = 0; i < nums.length; i++){
-            int keyToFind = target - nums[i];
-            if(map.containsKey(keyToFind) && map.get(keyToFind) != i){ //why "&& map.get(keyToFind) != i" condition?**
-                return new int[] {i, map.get(keyToFind)};
-            }
-        }
-        
-        return new int[] {};
+        return result;
         
     }
 	
