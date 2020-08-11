@@ -23,7 +23,7 @@ public class ValidParenthesis20 {
 //		}
 //		return stack.empty();
 		
-		//edge case
+		
 		//edge case
         if(s == null || s.length() == 0) return true;
         //for a valid parenthsis it needs to be an even length string. 
