@@ -1,5 +1,7 @@
 package LeetCode;
 
+import java.util.HashMap;
+
 //problem: https://leetcode.com/problems/first-unique-character-in-a-string/
 public class p387_firstUniqChar {
 	
@@ -18,20 +20,41 @@ public class p387_firstUniqChar {
 	//this is faster version than the previous version
 	public static int firstUniqChar(String s) {
         
-		int[] frequency = new int[26];
+		//solution 1: array method
+//		int[] frequency = new int[26];
+//		for(char c: s.toCharArray()) {
+//			//count each character frequency
+//			frequency[c-'a']++;
+//		}
+//		//once done with counting frequency check which character has one occurence
+//		//return that index
+//		for(int i=0;i<s.length();i++) {
+//			if(frequency[s.charAt(i)-'a'] == 1) {
+//				return i;
+//			}
+//		}
+//		
+//		return -1;
+		
+		//solution 2: hashmap method
+		HashMap<Character, Integer> map = new HashMap<Character, Integer> ();
+		
 		for(char c: s.toCharArray()) {
-			//count each character frequency
-			frequency[c-'a']++;
+			if(map.get(c) != null) {
+				map.put(c, map.get(c)+1);
+			}else map.put(c, 1);
+			
+			//the above three lines can be replaced with the following:
+			//map.put(c, map.getOrDefault(c, 0)+1);
 		}
-		//once done with counting frequency check which character has one occurence
-		//return that index
+		
 		for(int i=0;i<s.length();i++) {
-			if(frequency[s.charAt(i)-'a'] == 1) {
-				return i;
-			}
+			if(map.get(s.charAt(i)) == 1) return i;
 		}
 		
 		return -1;
+		
+		//runtime with hashmap is greater than runtime with array. memory consumption is almost the same. why? 
        
     }
 
