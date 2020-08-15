@@ -44,6 +44,11 @@ public class p15_3sum {
 	
 	public static void main(String[] args) {
 		//call the method from here
+		
+		int n=5;
+		while(--n>0) {
+			System.out.println(n);
+		}
 	}
 
 }

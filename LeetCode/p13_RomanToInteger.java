@@ -45,7 +45,7 @@ public class p13_RomanToInteger {
 
 	public static void main(String[] args) {
 		
-		RomanToInteger13 obj = new RomanToInteger13();
+		p13_RomanToInteger obj = new p13_RomanToInteger();
 		System.out.println(obj.romanToInt("XIV"));
 	}
 		
