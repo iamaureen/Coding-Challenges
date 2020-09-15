@@ -49,6 +49,31 @@ public class p141_LinkedListCycle {
 		System.out.println("hello");
 		return false; */
 		
+		//hashset approach
+			/*
+			 * Set <ListNode> elements = new HashSet<>();
+	       
+	        ListNode temp = head; 
+	        
+	        while (temp!=null){
+	            if(!elements.add(temp)) return true;
+	            
+	            //a detailed version of the above line
+	            // if(elements.contain(temp)){
+	            //     return true;
+	            // }else{
+	            //     elements.add(temp);
+	            // }
+	            
+	            temp = temp.next; 
+	        }
+	        
+	        return false; 
+	        
+	        // time/space complexity - o(n)
+		 
+		 */
+		
 		
 		//solution: tortoise-hare technique
 		if (head == null) return false;
