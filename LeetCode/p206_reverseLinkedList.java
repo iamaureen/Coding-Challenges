@@ -16,7 +16,7 @@ public class p206_reverseLinkedList {
 	
 	 public ListNode reverseList(ListNode head) {
 	        
-	        
+	        //approach: iterative case
 		    //edge case
 	        if(head == null) return null; 
 	        
@@ -44,6 +44,39 @@ public class p206_reverseLinkedList {
 	        }
 	        
 	        return reverse;
+	        
+	        
+	        //approach: using stack
+	        /* 
+	         //Approach 2: using stack
+	        //if head is null or if there is only one element
+	        if (head == null) return null;
+	        
+	        //create a stack to store the nodes in the list
+	        Stack<ListNode> stack = new Stack<ListNode>();
+	        //loop through the list and insert into the stack
+	        while(head!=null){
+	            stack.push(head);
+	            head = head.next; //points to the next element
+	        }
+	        
+	        //create node to indicate the beginning of the reverse list
+	        ListNode dummy = new ListNode(-1);
+	        ListNode reverse = dummy; 
+	        
+	        while(!stack.isEmpty()){
+	            //get the top of the stack element
+	            ListNode current = stack.pop();
+	            //add this element as the next element in the reverse list
+	            //as im creating a new list so we are creating new node to hold the value each time....we add the element in reverse.next
+	             reverse.next = new ListNode(current.val);
+	            //now we point reverse to the newly created element so it adds the next element after this
+	            reverse = reverse.next; 
+	        }
+	        
+	        return dummy.next;
+        
+	         */
 	        
 	    }
 	 
