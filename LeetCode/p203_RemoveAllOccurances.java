@@ -29,7 +29,35 @@ public class p203_RemoveAllOccurances {
 	
 	public static Node removeElements(Node head, int val) {
 		
-		Node newHead = new Node(-1);
+		//three cases
+        //1. value can be at the beginning of the linked list (head value)
+        //2. value at the middle of the linked list
+        //3. value at the end of the linked list 
+        
+        //case #1
+        while(head!=null && head.x == val){
+            head = head.next; 
+        }
+        
+        //to keep the original pointer to the head 
+        Node temp = head;
+        
+        //when we are at a node, we want to check if the next node val is equal to val, so we need to check whether both of them are not empty
+        while(temp!=null && temp.next!=null){
+            
+            //if the value is equal to the value to be removed
+            if(temp.next.x == val){
+                temp.next = temp.next.next;
+                
+            }else{
+                temp = temp.next;
+            }
+            
+        }
+        
+        return head; 
+        
+		/* Node newHead = new Node(-1);
 		newHead.next = head;
 		Node prev = newHead;
 		Node current = head;
@@ -43,7 +71,8 @@ public class p203_RemoveAllOccurances {
 			current = current.next;
 		}
 		
-		return newHead.next;
+		return newHead.next;*/
+		
 	
 		/* the following version wont work because:
 		 * for sample input [1], val=1 should return [], but returns [1] instead
