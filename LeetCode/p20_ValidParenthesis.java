@@ -5,25 +5,26 @@ import java.util.*;
 public class p20_ValidParenthesis {
 	
 	public static boolean isValid(String s) {
-//		Stack<Character> stack = new Stack<Character>();
-//		
-//		for(char c: s.toCharArray()) {
-//			if(c == '(') {
-//				stack.push(')');
-//			}
-//			else if(c == '{') {
-//				stack.push('}');
-//			}
-//			else if(c == '[') {
-//				stack.push(']');
-//			}else if( stack.isEmpty() || stack.pop() != c) {
-//				return false;
-//			}
-//			
-//		}
-//		return stack.empty();
+		Stack<Character> stack = new Stack<Character>();
 		
+		for(char c: s.toCharArray()) {
+			if(c == '(') {
+				stack.push(')');
+			}
+			else if(c == '{') {
+				stack.push('}');
+			}
+			else if(c == '[') {
+				stack.push(']');
+			}else if( stack.isEmpty() || stack.pop() != c) {
+				return false;
+			}
+			
+		}
+		return stack.empty();
 		
+		/* wrong answer for [(}})] as it doesn't account for the two }} braces */
+		/* 
 		//edge case
         if(s == null || s.length() == 0) return true;
         //for a valid parenthsis it needs to be an even length string. 
@@ -42,6 +43,7 @@ public class p20_ValidParenthesis {
         
         if(parenthesis_stack.isEmpty()) return true;
         else return false;
+        */
         
 	}
 	
