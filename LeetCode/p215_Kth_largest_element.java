@@ -17,7 +17,11 @@ public class p215_Kth_largest_element {
         /* time complexity: nlogn because of sorting */
         
         //solution using heap
+		//The default PriorityQueue is implemented with Min-Heap, that is the top element is the minimum one in the heap.
+		
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        
+        //for max-heap: PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((o1, o2) -> o2-o1);
         
         for(int i:nums){
             minHeap.add(i);
