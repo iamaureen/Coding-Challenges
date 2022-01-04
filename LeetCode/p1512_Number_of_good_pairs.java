@@ -38,7 +38,7 @@ public int numIdenticalPairs(int[] nums) {
         //the total number of times we can pair is can be calculated using nC2 formula. 
         //simplication of this formula leads to (n*(n-1))/2;
         for(int n:count.values()){
-            if(n>1){
+            if(n>1){ //this condition is redundant as if a number has frequency=1, it will cancel out using the formula.
                 count_pair += (n*(n-1))/2;
             }
             
