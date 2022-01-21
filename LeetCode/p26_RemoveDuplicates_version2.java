@@ -27,6 +27,21 @@ public class p26_RemoveDuplicates_version2 {
         //at the end of the for loop, pointer1 should indicate the length (indicates the index. so, index+1)
         return pointer1+1;
         
+        
+       /* int length = 0;
+        int i = 0, j;
+        if(nums.length<=1) 
+            return nums.length;
+        
+        for (j = 1; j < nums.length; j++){
+            if(nums[i]!=nums[j]){
+                length++;
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return length+1;*/
+        
     }
 	
 	public static void main(String arg[]) {
