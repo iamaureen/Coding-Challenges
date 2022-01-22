@@ -6,11 +6,10 @@ public class p79_wordSearch {
 	
 public boolean exist(char[][] board, String word) {
         
-        
         for(int i=0;i<board.length;i++){
             for(int j=0;j<board[i].length;j++){
                 //if the board element is equal to the first letter of the word
-                //why pass count == 0?
+                //why pass count == 0 -- starting index
                 if(board[i][j] == word.charAt(0) && dfs(board, i, j, 0, word)){
                     return true;
                 }
@@ -26,7 +25,7 @@ public boolean exist(char[][] board, String word) {
             return true;
         }
         
-        //check the grid boundaries
+        //check the grid boundaries - e.g., if it is the first row, second dfs call in the if condition will be negative
         if(i < 0 || i >= board.length || j < 0 || j >= board[i].length || board[i][j] != word.charAt(count)){
             return false;
         }
