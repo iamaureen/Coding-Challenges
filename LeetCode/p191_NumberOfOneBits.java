@@ -4,14 +4,21 @@ package LeetCode;
 
 public class p191_NumberOfOneBits {
 	
-	//returns the number of '1' bits it has (also known as the Hamming weight)
-	public static int hammingWeight(int n) {
-        int count = 0;
-        while(n!=0){
-            n = n & (n-1);
-            count++;
+public static int hammingWeight(int n) {
+        
+        int num_bits = 0;
+        int mask = 1;
+        //we check each of the 32 bits of the number 
+        for(int i=0; i<32; i++){
+            
+            if((n & mask) != 0){ 
+                num_bits++;
+            }
+            
+            mask <<= 1;
         }
-        return count;
+        
+        return num_bits;
         
     }
 	
