@@ -16,7 +16,10 @@ public class p20_ValidParenthesis {
 			}
 			else if(c == '[') {
 				stack.push(']');
-			}else if( stack.isEmpty() || stack.pop() != c) {
+			}//the first condition is needed for inputs like ']' i.e., inputs
+            //without opening brackets, in that case the stack is empty and will 
+            //throw a runtime error
+			else if( stack.isEmpty() || stack.pop() != c) {
 				return false;
 			}
 			
